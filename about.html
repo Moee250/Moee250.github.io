@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Website Title and Navigation -->
+    <div class="container">
+        <div class="title">
+            <h1>About Me</h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <button id="lightScheme">Light Color Scheme</button>
+    <button id="darkScheme">Dark Color Scheme</button>
+
+    <div class="content">
+        <!-- Left Column: Introduction -->
+        <div class="intro">
+            <h2>Who am i ?</h2>
+            <p>Hello, I'm Mohamed Abdalla. I'm passionate about web development and technology. I aim to become a Software engineer. As im still in first year, I dont have many projects going on, but I have had one or two small scale projects.
+                 The website will continously update with any new projects I have going on.</p>
+            <!-- Add more text about yourself as needed -->
+        </div>
+        
+        <ul>
+            <li>My interests in the tech world :
+                <ul>
+                    <li>Web Development</li>
+                    <li>Artifical Intelligence</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="picture1">
+            <img src="webdevelopment.jpg" alt="Picture of Web Development process" width="300" height="200">
+        </div>
+        <!-- Right Column: Picture -->
+        <div class="testiomonials">
+            <h3> Testiomonials</h3>
+            <p> No Testiomonials as of yet ! Please check back later.</p>
+        </div>
+    </div>
+    
+    <h1>Lets get in touch !</h1>
+    <form id="myForm" action="form" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required pattern="[A-Za-z\s]{3,}"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="18" max="99"><br><br>
+
+        <label for="website">Personal Website:</label>
+        <input type="url" id="website" name="website" required><br><br>
+
+
+        <input type="submit" value="Submit">
+    </form>
+    <script src="script.js"></script> 
+    <script src="colorscheme.js"></script> 
+</body>
+</html>

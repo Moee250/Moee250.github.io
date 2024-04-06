@@ -1,0 +1,343 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body, ul, ol,p {
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.title{
+    margin:auto;
+    text-align:auto;
+}
+
+/* Navigation */
+.navigation {
+    background: #333;
+    color: #fff;
+}
+
+.navigation ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul li {
+    margin: 0 10px;
+}
+
+.navigation ul a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation ul a:hover, .navigation ul a:focus {
+    background: #555;
+    color: #fff;
+}
+
+/* Typography & Links */
+.title h1, .intro h2, .lists h2, .table h2 {
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+#picture2 {
+    border: 3px solid #333; 
+    margin: auto; 
+    padding: auto; 
+}
+
+/* Image Styles */
+.picture, #picture2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    border: #333;
+}
+
+.picture img, .picture2 img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.content {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Image Styles */
+.picture img, .picture2 img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main-content main-content"
+        "footer footer footer";
+    grid-gap: 10px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: #e0e0e0; /* Adjust the color as per your design */
+    border: 1px solid #ccc;
+}
+
+
+/* Audio & Video */
+.audio audio, .youtube-video iframe {
+    max-width: 100%;
+    border: none;
+}
+
+/* Table Styles */
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #333;
+    color: #fff;
+}
+/* Flexbox layout */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1 0 30%; /* Flex-grow, Flex-shrink, Flex-basis */
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Adjust the color as per your design */
+    border: 1px solid #ccc;
+}
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Multiple Selector */
+.container, .title, .navigation, .content {
+    transition: all 0.3s ease;
+}
+
+/* Child Selector */
+.content > .intro, .content > .lists, .content > .table {
+    background-color: #f9f9f9;
+}
+
+/* Sibling Selector */
+.intro ~ .picture {
+    margin-top: 30px;
+}
+
+/* Adjacent Sibling Selector */
+.intro + .picture {
+    margin-top: 15px;
+}
+
+/* Attribute Selector */
+a[href^="http"] {
+    background-color: #ddd;
+}
+
+/* Pseudo-element Selector */
+.intro::before {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Pseudo-class Selector */
+a:hover, a:focus {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* Applying Flexbox to the .grid-container */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grid-item {
+    flex-basis: calc(33.333% - 20px);
+    margin: 10px;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .grid-item {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+/* Responsive Flex Items */
+@media (max-width: 768px) {
+    .flex-item {
+        flex: 1 0 100%;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .navigation ul li {
+        margin-bottom: 10px;
+    }
+
+    .navigation ul a {
+        padding: 10px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+    color: #666;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.light-scheme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #1a0dab;
+    --nav-background-color: #f8f9fa;
+    --nav-text-color: #000000;
+}
+
+
+.dark-scheme {
+    --h1-color: white ; 
+    --background-color: #0b0a0a;
+    --text-color: #e0e0e0;
+    --link-color: #8ab4f8;
+    --nav-background-color: #202124;
+    --nav-text-color: #e0e0e0;
+}
+
+.dark-scheme .title h1 {
+    color: #f5efef; /* Ensure text is white in dark mode */
+}
+
+.dark-scheme h1, .dark-scheme h2, .dark-scheme p,
+.dark-scheme li, .dark-scheme td, td
+ {
+    color: black; /* Ensures text is visible on dark background */
+}
+.dark-scheme .flex-item {
+    color: rgb(147, 58, 58); 
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+
+
+
